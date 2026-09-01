@@ -1,0 +1,155 @@
+body {
+  font-family: 'Comic Relief', system-ui, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+
+  .sidebar {
+    flex: 0 0 40%;
+    position: relative;
+
+    .background-image {
+      width: 100%;
+    }
+
+    .logo-container {
+      position: absolute;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .logo-image {
+        width: 100px;
+        height: auto;
+      }
+
+      .logo-name {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+
+    .sidebar-footer {
+      position: absolute;
+      bottom: 0.5rem;
+      width: 100%;
+
+      .information {
+        text-align: center;
+        font-size: 0.875rem;
+        color: white;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+
+    section:first-child {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 1rem 3rem 3rem 3rem;
+
+      p {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      p:first-child {
+        margin-bottom: 2rem;
+        width: 80%;
+      }
+    }
+
+    section:nth-child(2) {
+      flex: 2;
+
+      form {
+        p {
+          margin: 0;
+          margin-bottom: 1.5rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-left: 3rem;
+        }
+
+        .inputs {
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          padding-bottom: 2.5rem;
+
+          .row {
+            display: flex;
+            gap: 4rem;
+            margin-left: 3rem;
+
+            .field {
+              display: flex;
+              flex-direction: column;
+
+              input {
+                width: 250px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+              }
+
+              input:user-invalid {
+                border: 1px solid red;
+              }
+            }
+          }
+        }
+
+        .create-account {
+          margin: 2rem 0 0 3rem;
+
+          button {
+            background-color: #596d48;
+            border: none;
+            border-radius: 0.5rem;
+            color: white;
+            font-family: inherit;
+            padding: 1rem 3rem;
+            cursor: pointer;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .login {
+        font-size: 1rem;
+        margin: 2rem 0 0 3rem;
+
+        button {
+          background: none;
+          border: none;
+          color: #596d48;
+          cursor: pointer;
+          font-family: inherit;
+          font-weight: bold;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
